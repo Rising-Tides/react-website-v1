@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { ethers } from 'ethers';
 import contract from '../contracts/NFTCollectible.json';
 
-const contractAddress = "0x836049Ddc0e177D2f52871b2d6e443dac0f2b659";
+export const contractAddress = "0x836049Ddc0e177D2f52871b2d6e443dac0f2b659";
 const abi = contract.abi;
 
 
@@ -138,3 +138,4 @@ function HeroSection() {
 }
 
 export default HeroSection;
+
