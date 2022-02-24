@@ -41,7 +41,7 @@ function HeroSection() {
         console.log('Ethereum successfully detected!');
         // Access the decentralized web!
       } else {
-        console.log('Please install MetaMask!');
+        console.log('Please install MetaMask');
       }
     }
     const accounts = await ethereum.request({ method: 'eth_accounts' });
