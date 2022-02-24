@@ -17,11 +17,32 @@ function HeroSection() {
   const checkWalletIsConnected = async () => { 
     const { ethereum } = window;
   
-    if (!ethereum) {
-      console.log("Make sure you have Metamask installed!");
-      return;
+    // if (!ethereum) {
+    //   console.log("Make sure you have Metamask installed!");
+    //   return;
+    // } else {
+    //   console.log("Wallet exists! We're ready to go!")
+    // }
+    if (window.ethereum) {
+      handleEthereum();
     } else {
-      console.log("Wallet exists! We're ready to go!")
+      window.addEventListener('ethereum#initialized', handleEthereum, {
+        once: true,
+      });
+    
+      // If the event is not dispatched by the end of the timeout,
+      // the user probably doesn't have MetaMask installed.
+      setTimeout(handleEthereum, 3000); // 3 seconds
+    }
+    
+    function handleEthereum() {
+      const { ethereum } = window;
+      if (ethereum && ethereum.isMetaMask) {
+        console.log('Ethereum successfully detected!');
+        // Access the decentralized web!
+      } else {
+        console.log('Please install MetaMask!');
+      }
     }
     const accounts = await ethereum.request({ method: 'eth_accounts' });
   
