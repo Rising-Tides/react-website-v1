@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { contractAddress } from './HeroSection.js';
-import { Button } from './Button';
+// import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -11,12 +11,11 @@ function Footer() {
         <p className='footer-subscription-heading'>
           Checkout the NFTs
         </p>
-        <Button 
-          buttonStyle='btn--outline'
-          to={`https://rinkeby.etherscan.io/address/${contractAddress}`}
+        <a
+          href={`https://rinkeby.etherscan.io/address/${contractAddress}`}
         >
           {contractAddress}
-        </Button>
+        </a>
         {/* <div className='input-areas'>
           <form>
             <input
