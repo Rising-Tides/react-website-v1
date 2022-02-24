@@ -2,5 +2,11 @@ import React from 'react';
 import '../../App.css';
 
 export default function FAQ() {
-  return <h1 className='FAQ'>FAQ</h1>;
+  return (
+    <div className='FAQ'>
+      <h1>FAQ</h1>
+
+    </div>
+    );
+
 }
