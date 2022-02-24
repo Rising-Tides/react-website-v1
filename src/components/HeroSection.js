@@ -59,7 +59,8 @@ function HeroSection() {
     const { ethereum } = window;
   
     if (!ethereum) {
-      alert("Please install Metamask!");
+       alert("Please install Metamask");
+      window.location.replace("https://metamask.io/download/");
     }
   
     try {
