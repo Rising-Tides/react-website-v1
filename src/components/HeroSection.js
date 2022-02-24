@@ -78,9 +78,14 @@ function HeroSection() {
   
   const connectWalletButton = () => {
     return (
-      <button onClick={connectWalletHandler} className='cta-button connect-wallet-button'>
-        Connect Wallet
-      </button>
+      <Button  
+        className='btns'
+        buttonStyle='btn--primary'
+        buttonSize='btn--large'
+        onClick={connectWalletHandler}
+        >
+        CONNECT WALLET
+      </Button>
     )
   }
   

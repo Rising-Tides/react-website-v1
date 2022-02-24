@@ -7,10 +7,12 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.26.0",
     "ethers": "^5.5.4",
     "ignore-warnings": "^0.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-infinite-scroller": "^1.2.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
