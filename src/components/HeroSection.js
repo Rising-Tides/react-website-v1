@@ -172,14 +172,14 @@ function HeroSection() {
 
   useEffect(() => {
     // checkWalletIsConnected();
-    var images = ["images/img_9.jpg", "images/img_2.jpg","images/img_6.jpg", "images/img_4.jpg"];
+    // var images = ["images/IMG_9.jpg", "images/IMG_2.jpg","images/IMG_6.jpg", "images/IMG_4.jpg"];
 
-    var cnt = 0;
-    const iId=setInterval(() => {
-      if (cnt>=images.length) cnt=0; 
-        $('.hero-container').css("background-image","url("+images[cnt++]+")", "center center/cover no-repeat");
-    }, 2500);
-    return () => clearInterval(iId);
+    // var cnt = 0;
+    // const iId=setInterval(() => {
+    //   if (cnt>=images.length) cnt=0; 
+    //     $('.hero-container').css("background-image","url("+images[cnt++]+")", "center center/cover no-repeat");
+    // }, 2500);
+    // return () => clearInterval(iId);
 
   }, [])  
 
