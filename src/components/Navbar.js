@@ -30,7 +30,7 @@ function Navbar() {
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             {/* XOJUSTKIRST */}
-            <a href="https://www.fontspace.com/category/cursive"><img src="https://see.fontimg.com/api/renderfont4/z89Pa/eyJyIjoiZnMiLCJoIjozMiwidyI6MTAwMCwiZnMiOjMyLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/WE9KVVNUS0lSU1Q/amazing-mother.png" alt="Cursive fonts"/></a>
+            <a href="https://instagram.com/xojustkirst"><img src="https://see.fontimg.com/api/renderfont4/z89Pa/eyJyIjoiZnMiLCJoIjozMiwidyI6MTAwMCwiZnMiOjMyLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/WE9KVVNUS0lSU1Q/amazing-mother.png" alt="Cursive fonts"/></a>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

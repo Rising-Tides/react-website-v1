@@ -9,9 +9,9 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         {/* <p className='footer-subscription-heading'>
-          Checkout the NFT contract (on Rinkeby)
-        </p>
-        <a
+          More to come soon!
+        </p> */}
+        {/* <a
           href={`https://rinkeby.etherscan.io/address/${contractAddress}`}
         >
           {contractAddress}
