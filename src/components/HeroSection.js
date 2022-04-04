@@ -3,7 +3,9 @@ import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
 import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
+import $ from 'jquery';
+
 // import ethSend from 'eth-send';
 // import Web3 from 'web3';
 
@@ -16,65 +18,66 @@ export const contractAddress = "0x836049Ddc0e177D2f52871b2d6e443dac0f2b659";
 
 
 function HeroSection() {
-  const [currentAccount, setCurrentAccount] = useState(null);
+  // const [currentAccount, setCurrentAccount] = useState(null);
+  // const [setCurrentAccount] = useState(null);
 
-  const checkWalletIsConnected = async () => { 
-    const { ethereum } = window;
+  // const checkWalletIsConnected = async () => { 
+  //   const { ethereum } = window;
   
-    // if (!ethereum) {
-    //   console.log("Make sure you have Metamask installed!");
-    //   return;
-    // } else {
-    //   console.log("Wallet exists! We're ready to go!")
-    // }
-    if (window.ethereum) {
-      handleEthereum();
-    } else {
-      window.addEventListener('ethereum#initialized', handleEthereum, {
-        once: true,
-      });
+  //   // if (!ethereum) {
+  //   //   console.log("Make sure you have Metamask installed!");
+  //   //   return;
+  //   // } else {
+  //   //   console.log("Wallet exists! We're ready to go!")
+  //   // }
+  //   if (window.ethereum) {
+  //     handleEthereum();
+  //   } else {
+  //     window.addEventListener('ethereum#initialized', handleEthereum, {
+  //       once: true,
+  //     });
     
-      // If the event is not dispatched by the end of the timeout,
-      // the user probably doesn't have MetaMask installed.
-      setTimeout(handleEthereum, 3000); // 3 seconds
-    }
+  //     // If the event is not dispatched by the end of the timeout,
+  //     // the user probably doesn't have MetaMask installed.
+  //     setTimeout(handleEthereum, 3000); // 3 seconds
+  //   }
     
-    function handleEthereum() {
-      const { ethereum } = window;
-      if (ethereum && ethereum.isMetaMask) {
-        console.log('Ethereum successfully detected!');
-        // Access the decentralized web!
-      } else {
-        console.log('Please install MetaMask  ');
-      }
-    }
-    const accounts = await ethereum.request({ method: 'eth_accounts' });
+  //   function handleEthereum() {
+  //     const { ethereum } = window;
+  //     if (ethereum && ethereum.isMetaMask) {
+  //       console.log('Ethereum successfully detected!');
+  //       // Access the decentralized web!
+  //     } else {
+  //       console.log('Please install MetaMask  ');
+  //     }
+  //   }
+  //   const accounts = await ethereum.request({ method: 'eth_accounts' });
   
-    if (accounts.length !== 0) {
-      const account = accounts[0];
-      console.log("Found an authorized account: ", account);
-      setCurrentAccount(account); 
-    } else {
-      console.log("No authorized account found");
-    }
-  }
+  //   if (accounts.length !== 0) {
+  //     const account = accounts[0];
+  //     console.log("Found an authorized account: ", account);
+  //     setCurrentAccount(account); 
+  //   } else {
+  //     console.log("No authorized account found");
+  //   }
+  // }
   
-  const connectWalletHandler = async () => { 
-    const { ethereum } = window;
+  // const connectWalletHandler = async () => { 
+  //   const { ethereum } = window;
   
-    if (!ethereum) {
-       alert("Please install Metamask");
-      window.location.replace("https://metamask.io/download/");
-    }
+  //   if (!ethereum) {
+  //      alert("Please install Metamask");
+  //     window.location.replace("https://metamask.io/download/");
+  //   }
   
-    try {
-      const accounts = await ethereum.request({method: 'eth_requestAccounts' });
-      console.log("Found an account! Address: ", accounts[0]);
-      setCurrentAccount(accounts[0]);
-    } catch (err) {
-      console.log(err)
-    }
-  }
+  //   try {
+  //     const accounts = await ethereum.request({method: 'eth_requestAccounts' });
+  //     console.log("Found an account! Address: ", accounts[0]);
+  //     setCurrentAccount(accounts[0]);
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
   
   // const mintNftHandler = async () => { 
   //   try {
@@ -131,18 +134,18 @@ function HeroSection() {
     }
   }
   
-  const connectWalletButton = () => {
-    return (
-      <Button  
-        className='btns'
-        buttonStyle='btn--primary'
-        buttonSize='btn--large'
-        onClick={connectWalletHandler}
-        >
-        CONNECT WALLET
-      </Button>
-    )
-  }
+  // const connectWalletButton = () => {
+  //   return (
+  //     <Button  
+  //       className='btns'
+  //       buttonStyle='btn--primary'
+  //       buttonSize='btn--large'
+  //       onClick={connectWalletHandler}
+  //       >
+  //       CONNECT WALLET
+  //     </Button>
+  //   )
+  // }
   
   const mintNftButton = () => {
     return (
@@ -160,16 +163,33 @@ function HeroSection() {
       </Button>
     )
   }
+  // var images = ["img_1.jpg","img_2.jpg","img_3.jpg"];
   
+  // function slideshow() { 
+  //   if (cnt>=images.length) cnt=0; 
+  //     $('.hero-container').css("background-image","url("+images[cnt++]+")");
+  // }
+
   useEffect(() => {
-    checkWalletIsConnected();
+    // checkWalletIsConnected();
+    var images = ["images/img_9.jpg", "images/img_2.jpg","images/img_6.jpg"];
+
+    var cnt = 0;
+    const iId=setInterval(() => {
+      if (cnt>=images.length) cnt=0; 
+        $('.hero-container').css("background-image","url("+images[cnt++]+")", "center center/cover no-repeat");
+    }, 2500);
+    return () => clearInterval(iId);
+
   }, [])  
+
   return (
     <div className='hero-container'>
       {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
       {/* <img src='/images/IMG_1.jpg'>''</img> */}
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
+      {/* <h1>ADVENTURE AWAITS</h1>
+      <p>What are you waiting for?</p> */}
+      {/* <p>Send Kirstin some Ethereum!</p> */}
       <div className='hero-btns'>
         {/* <Button
           className='btns'
@@ -188,7 +208,8 @@ function HeroSection() {
         </Button> */}
       </div>
       <div>
-        {currentAccount ? mintNftButton() : connectWalletButton()}
+        {/* {currentAccount ? mintNftButton() : connectWalletButton()} */}
+        {mintNftButton()}
       </div>      
     </div>
   );
