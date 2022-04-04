@@ -4,11 +4,15 @@ import { Button } from './Button';
 import './HeroSection.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { ethers } from 'ethers';
-import contract from '../contracts/NFTCollectible.json';
+// import ethSend from 'eth-send';
+// import Web3 from 'web3';
 
+// import { ethers } from 'ethers';
+// import contract from '../contracts/NFTCollectible.json';
+
+export const tipJar = "0x8DAA10845A8144469da192ef18b13bCdFBb73591";
 export const contractAddress = "0x836049Ddc0e177D2f52871b2d6e443dac0f2b659";
-const abi = contract.abi;
+// const abi = contract.abi;
 
 
 function HeroSection() {
@@ -72,22 +76,51 @@ function HeroSection() {
     }
   }
   
-  const mintNftHandler = async () => { 
+  // const mintNftHandler = async () => { 
+  //   try {
+  //     const { ethereum } = window;
+  
+  //     if (ethereum) {
+  //       const provider = new ethers.providers.Web3Provider(ethereum);
+  //       const signer = provider.getSigner();
+  //       const nftContract = new ethers.Contract(contractAddress, abi, signer);
+  
+  //       console.log("Initialize payment");
+  //       let nftTxn = await nftContract.mintNFTs(1, { value: ethers.utils.parseEther("0.01") });
+  
+  //       console.log("Mining... please wait");
+  //       await nftTxn.wait();
+  
+  //       console.log("Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash");
+  
+  //     } else {
+  //       console.log("Ethereum object does not exist");
+  //     }
+  
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
+  
+  const tipETH = async () => { 
     try {
       const { ethereum } = window;
   
       if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        const nftContract = new ethers.Contract(contractAddress, abi, signer);
+        // const provider = new ethers.providers.Web3Provider(ethereum);
+        // const signer = provider.getSigner();
+        const value = 0.001 // ether
+        window.open(`https://pay.buildship.dev/to/${tipJar}?value=${value}`,'payment','width=500, height=800');
+      
+        // const nftContract = new ethers.Contract(contractAddress, abi, signer);
   
-        console.log("Initialize payment");
-        let nftTxn = await nftContract.mintNFTs(1, { value: ethers.utils.parseEther("0.01") });
+        // console.log("Initialize payment");
+        // let nftTxn = await nftContract.mintNFTs(1, { value: ethers.utils.parseEther("0.01") });
   
-        console.log("Mining... please wait");
-        await nftTxn.wait();
+        // console.log("Mining... please wait");
+        // await nftTxn.wait();
   
-        console.log("Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash");
+        // console.log("Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash");
   
       } else {
         console.log("Ethereum object does not exist");
@@ -120,9 +153,10 @@ function HeroSection() {
         className='btns'
         buttonStyle='btn--outline'
         buttonSize='btn--large'
-        onClick={mintNftHandler}
+        // onClick={mintNftHandler}
+        onClick={tipETH}
         >
-        Mint NFT
+        Send Tip
       </Button>
     )
   }
@@ -132,7 +166,8 @@ function HeroSection() {
   }, [])  
   return (
     <div className='hero-container'>
-      <video src='/videos/video-2.mp4' autoPlay loop muted />
+      {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
+      {/* <img src='/images/IMG_1.jpg'>''</img> */}
       <h1>ADVENTURE AWAITS</h1>
       <p>What are you waiting for?</p>
       <div className='hero-btns'>

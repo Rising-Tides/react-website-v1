@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../App.css';
+// import Cards from '../Cards';
+
 // import InfiniteScroll from 'react-infinite-scroller';
 
 // function importAll(r) {
@@ -12,9 +14,9 @@ import '../../App.css';
 
 export default function Products() {
   return (
-    // <>
+    <>
     <h1 className='products'>PRODUCTS</h1>
-    //   {/* <InfiniteScroll
+      {/* <InfiniteScroll
     //       pageStart={0}
     //       loadMore={loadFunc}
     //       hasMore={true || false}
@@ -22,7 +24,9 @@ export default function Products() {
     //   >
     //       {images} 
     //   </InfiniteScroll> */}
-    // </>
+    {/* <Cards /> */}
+    </>
+
 
   );
 }
