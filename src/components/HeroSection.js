@@ -112,7 +112,7 @@ function HeroSection() {
       if (ethereum) {
         // const provider = new ethers.providers.Web3Provider(ethereum);
         // const signer = provider.getSigner();
-        const value = 0.001 // ether
+        const value = 0.01 // ether
         window.open(`https://pay.buildship.dev/to/${tipJar}?value=${value}`,'payment','width=500, height=800');
       
         // const nftContract = new ethers.Contract(contractAddress, abi, signer);
@@ -172,7 +172,7 @@ function HeroSection() {
 
   useEffect(() => {
     // checkWalletIsConnected();
-    var images = ["images/img_9.jpg", "images/img_2.jpg","images/img_6.jpg"];
+    var images = ["images/img_9.jpg", "images/img_2.jpg","images/img_6.jpg", "images/img_4.jpg"];
 
     var cnt = 0;
     const iId=setInterval(() => {
