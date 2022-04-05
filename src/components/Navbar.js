@@ -89,7 +89,21 @@ function Navbar() {
                   <a href='https://instagram.com/xojustkirst'> 
                     <i class='fab fa-instagram' />
                   </a>
-              </Link>   
+              </Link>    
+            </li>
+            <li>
+              <Link
+                    class='social-icon-link instagram'
+                    className='nav-links'
+                    // to='/https://instagram.com/pandapennypicks'
+                    target='_blank'
+                    aria-label='Twitch'
+                    // onClick={window.open('https://instagram.com/xojustkirst')}
+                  >
+                    <a href='https://www.twitch.tv/xojustkirst'> 
+                      <i class='fab fa-twitch' />
+                    </a>
+                </Link> 
             </li>
           </ul>
           {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
