@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../App.css';
+// import HeroSection from '../HeroSection';
+
 // import Cards from '../Cards';
 
 // import InfiniteScroll from 'react-infinite-scroller';
@@ -16,6 +18,7 @@ export default function Products() {
   return (
     <>
     <h1 className='products'>PRODUCTS</h1>
+    {/* <HeroSection/> */}
       {/* <InfiniteScroll
     //       pageStart={0}
     //       loadMore={loadFunc}

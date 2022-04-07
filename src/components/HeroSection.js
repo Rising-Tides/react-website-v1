@@ -113,7 +113,7 @@ function HeroSection() {
         // const provider = new ethers.providers.Web3Provider(ethereum);
         // const signer = provider.getSigner();
         const value = 0.01 // ether
-        window.open(`https://pay.buildship.dev/to/${tipJar}?value=${value}`,'payment','width=500, height=800');
+        window.open(`https://pay.buildship.dev/to/${tipJar}?value=${value}`);
       
         // const nftContract = new ethers.Contract(contractAddress, abi, signer);
   
