@@ -198,7 +198,7 @@ function HeroSection() {
             className='btns'
             buttonStyle='btn--outline'
             buttonSize='btn--large'
-            onClick={()=> window.open('https://instagram.com/xojustkirst', "_blank")}
+            onClick={()=> window.open('https://instagram.com/xojustkirst')}
           >
           
               <i className='fa fa-instagram' />
