@@ -5,6 +5,7 @@ import './HeroSection.css';
 import { useEffect } from 'react';
 // import { useState } from 'react';
 import $ from 'jquery';
+// import { Link } from 'react-router-dom';
 
 // import ethSend from 'eth-send';
 // import Web3 from 'web3';
@@ -196,11 +197,11 @@ function HeroSection() {
             className='btns'
             buttonStyle='btn--outline'
             buttonSize='btn--large'
-            // onClick={window.open('https://instagram.com/xojustkirst')}
+            onClick={()=> window.open('https://instagram.com/xojustkirst', "_blank")}
           >
-          <a href='https://instagram.com/xojustkirst'> 
-            <i className='fa fa-instagram' />
-          </a>
+          
+              <i className='fa fa-instagram' />
+
           </Button> 
         </div>
         <div>
@@ -208,11 +209,9 @@ function HeroSection() {
             className='btns'
             buttonStyle='btn--outline'
             buttonSize='btn--large'
-            // onClick={window.open('https://instagram.com/xojustkirst')}
+            onClick={()=> window.open('https://twitch.tv/xojustkirst')}
           >
-          <a href='https://twitch.tv/xojustkirst'> 
             <i className='fa fa-twitch' />
-          </a>
           </Button> 
         </div>
 
