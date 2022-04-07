@@ -8,7 +8,7 @@ video {
 
 .hero-container {
   /* background: url('/images/IMG_8.jpg') center center/cover no-repeat; */
-  background-size: center center/cover no-repeat;
+  background-size: center/cover;
   background-position: center;
   background-repeat: no-repeat;
   /* position: static; */
