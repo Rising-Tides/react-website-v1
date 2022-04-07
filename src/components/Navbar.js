@@ -69,15 +69,17 @@ function Navbar() {
                 Watch
               </Link>
             </li> 
-
-            <li>
-              {/* <Link
-                to='/sign-up'
-                className='nav-links-mobile'
+            <li className='nav-item'>
+              <Link
+                to='/donate'
+                className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Sign Up
-              </Link> */}
+                Donate
+              </Link>
+            </li> 
+{/* 
+            <li>
               <Link
                   class='social-icon-link instagram'
                   className='nav-links'
@@ -104,7 +106,7 @@ function Navbar() {
                       <i class='fab fa-twitch' />
                     </a>
                 </Link> 
-            </li>
+            </li> */}
           </ul>
           {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
         </div>

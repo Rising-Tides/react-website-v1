@@ -4,7 +4,7 @@
 
 // export function Button() {
 //   return (
-//     <Link to='sign-up'>
+//     <Link to='donate'>
 //       <button className='btn'>Sign Up</button>
 //     </Link>
 //   );

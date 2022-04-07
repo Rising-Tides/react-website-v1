@@ -8,9 +8,9 @@
 .home,
 .FAQ,
 .watch,
-.sign-up {
+.donate {
   display: flex;
-  height: 90vh;
+  height: 300vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
@@ -44,8 +44,8 @@
   height: 400vh;
 }
 
-.sign-up {
-  background-image: url('/images/IMG_2.jpg');
+.donate {
+  background-image: url('/images/IMG_7.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

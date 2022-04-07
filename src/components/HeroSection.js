@@ -105,64 +105,64 @@ function HeroSection() {
   //   }
   // }
   
-  const tipETH = async () => { 
-    try {
-      const { ethereum } = window;
+  // const tipETH = async () => { 
+  //   try {
+  //     const { ethereum } = window;
   
-      if (ethereum) {
-        // const provider = new ethers.providers.Web3Provider(ethereum);
-        // const signer = provider.getSigner();
-        const value = 0.01 // ether
-        window.open(`https://pay.buildship.dev/to/${tipJar}?value=${value}`);
+  //     if (ethereum) {
+  //       // const provider = new ethers.providers.Web3Provider(ethereum);
+  //       // const signer = provider.getSigner();
+  //       const value = 0.01 // ether
+  //       window.open(`https://pay.buildship.dev/to/${tipJar}?value=${value}`);
       
-        // const nftContract = new ethers.Contract(contractAddress, abi, signer);
+  //       // const nftContract = new ethers.Contract(contractAddress, abi, signer);
   
-        // console.log("Initialize payment");
-        // let nftTxn = await nftContract.mintNFTs(1, { value: ethers.utils.parseEther("0.01") });
+  //       // console.log("Initialize payment");
+  //       // let nftTxn = await nftContract.mintNFTs(1, { value: ethers.utils.parseEther("0.01") });
   
-        // console.log("Mining... please wait");
-        // await nftTxn.wait();
+  //       // console.log("Mining... please wait");
+  //       // await nftTxn.wait();
   
-        // console.log("Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash");
+  //       // console.log("Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash");
   
-      } else {
-        console.log("Ethereum object does not exist");
-      }
+  //     } else {
+  //       console.log("Ethereum object does not exist");
+  //     }
   
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
   
-  // const connectWalletButton = () => {
+  // // const connectWalletButton = () => {
+  // //   return (
+  // //     <Button  
+  // //       className='btns'
+  // //       buttonStyle='btn--primary'
+  // //       buttonSize='btn--large'
+  // //       onClick={connectWalletHandler}
+  // //       >
+  // //       CONNECT WALLET
+  // //     </Button>
+  // //   )
+  // // }
+  
+  // const mintNftButton = () => {
   //   return (
+  //     // <button onClick={mintNftHandler} className='cta-button mint-nft-button'>
+  //     //   Mint NFT
+  //     // </button>
   //     <Button  
   //       className='btns'
-  //       buttonStyle='btn--primary'
+  //       buttonStyle='btn--outline'
   //       buttonSize='btn--large'
-  //       onClick={connectWalletHandler}
+  //       // onClick={mintNftHandler}
+  //       onClick={tipETH}
   //       >
-  //       CONNECT WALLET
+  //       Send Tip
   //     </Button>
   //   )
   // }
-  
-  const mintNftButton = () => {
-    return (
-      // <button onClick={mintNftHandler} className='cta-button mint-nft-button'>
-      //   Mint NFT
-      // </button>
-      <Button  
-        className='btns'
-        buttonStyle='btn--outline'
-        buttonSize='btn--large'
-        // onClick={mintNftHandler}
-        onClick={tipETH}
-        >
-        Send Tip
-      </Button>
-    )
-  }
   // var images = ["img_1.jpg","img_2.jpg","img_3.jpg"];
   
   // function slideshow() { 
@@ -187,29 +187,39 @@ function HeroSection() {
     <div className='hero-container'>
       {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
       {/* <img src='/images/IMG_1.jpg'>''</img> */}
-      {/* <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p> */}
+      {/* <h1>XOJUSTKIRST</h1> */}
+      {/* <p>What are you waiting for?</p> */}
       {/* <p>Send Kirstin some Ethereum!</p> */}
       <div className='hero-btns'>
-        {/* <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          GET STARTED
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('hey')}
-        >
-          WATCH TRAILER <i className='far fa-play-circle' />
-        </Button> */}
+        <div>
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+            // onClick={window.open('https://instagram.com/xojustkirst')}
+          >
+          <a href='https://instagram.com/xojustkirst'> 
+            <i className='fa fa-instagram' />
+          </a>
+          </Button> 
+        </div>
+        <div>
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+            // onClick={window.open('https://instagram.com/xojustkirst')}
+          >
+          <a href='https://twitch.tv/xojustkirst'> 
+            <i className='fa fa-twitch' />
+          </a>
+          </Button> 
+        </div>
+
       </div>
       <div>
         {/* {currentAccount ? mintNftButton() : connectWalletButton()} */}
-        {mintNftButton()}
+        {/* {mintNftButton()} */}
       </div>      
     </div>
   );
