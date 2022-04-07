@@ -47,7 +47,7 @@ export default function Donate() {
   //     </Button>
   //   )
   // }
-  
+
   const mintNftButton = () => {
     return (
       // <button onClick={mintNftHandler} className='cta-button mint-nft-button'>
@@ -63,7 +63,9 @@ export default function Donate() {
           >
           Send ETH
         </Button>
+
       </div>
+
 
     )
   }
@@ -71,5 +73,6 @@ export default function Donate() {
     <div className='donate'>
       {mintNftButton()}
     </div>
+
   )
 }
