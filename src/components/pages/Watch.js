@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../App.css';
+import ReactTwitchEmbedVideo from "react-twitch-embed-video";
 // import HeroSection from '../HeroSection';
 
 // import Cards from '../Cards';
@@ -13,11 +14,17 @@ import '../../App.css';
 // }
 
 
-
-export default function Products() {
+export default function Watch() {
   return (
     <>
-    <h1 className='products'>PRODUCTS</h1>
+    <h1 className='watch'> 
+      <ReactTwitchEmbedVideo 
+        className='twitch-embed'
+        channel="xojustkirst" 
+        height='100%'
+        width='100%'
+        />
+    </h1>
     {/* <HeroSection/> */}
       {/* <InfiniteScroll
     //       pageStart={0}
@@ -28,6 +35,7 @@ export default function Products() {
     //       {images} 
     //   </InfiniteScroll> */}
     {/* <Cards /> */}
+    {/* <ReactTwitchEmbedVideo channel="xojustkirst" /> */}
     </>
 
 

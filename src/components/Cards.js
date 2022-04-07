@@ -33,7 +33,7 @@ function Cards() {
               src='images/img_6.jpg'
               text='Ride through the Sahara Desert on a guided camel tour'
               label='Adrenaline'
-              path='/products'
+              path='/watch'
             />
           </ul>
         </div>
