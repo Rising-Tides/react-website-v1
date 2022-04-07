@@ -173,6 +173,7 @@ function HeroSection() {
 
   useEffect(() => {
     // checkWalletIsConnected();
+
     var images = ["images/IMG_9.jpg", "images/IMG_2.jpg","images/IMG_6.jpg", "images/IMG_4.jpg"];
 
     var cnt = 0;
