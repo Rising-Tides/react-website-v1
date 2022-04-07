@@ -53,15 +53,18 @@ export default function Donate() {
       // <button onClick={mintNftHandler} className='cta-button mint-nft-button'>
       //   Mint NFT
       // </button>
-      <Button  
-        className='btns'
-        buttonStyle='btn--outline'
-        buttonSize='btn--large'
-        // onClick={mintNftHandler}
-        onClick={tipETH}
-        >
-        Send Tip
-      </Button>
+      <div className='tip'>
+        <Button  
+          className='btns'
+          buttonStyle='btn--outline'
+          buttonSize='btn--large'
+          // onClick={mintNftHandler}
+          onClick={tipETH}
+          >
+          Send ETH
+        </Button>
+      </div>
+
     )
   }
   return(
