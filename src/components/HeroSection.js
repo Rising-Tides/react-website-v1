@@ -177,7 +177,7 @@ function HeroSection() {
     var cnt = 0;
     const iId=setInterval(() => {
       if (cnt>=images.length) cnt=0; 
-        $('.hero-container').css("background-image","url("+images[cnt++]+")");
+        $('.hero-container').css("background-image","url("+images[cnt++]+")", "center center/cover no-repeat");
     }, 2500);
     return () => clearInterval(iId);
 
