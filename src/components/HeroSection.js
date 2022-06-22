@@ -12,13 +12,33 @@ import $ from 'jquery';
 
 // import { ethers } from 'ethers';
 // import contract from '../contracts/NFTCollectible.json';
+import { WalletLinkConnector } from "@web3-react/walletlink-connector";
+import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
+import { InjectedConnector } from "@web3-react/injected-connector";
+import { useWeb3React } from '@web3-react/core'
 
+export const CoinbaseWallet = new WalletLinkConnector({
+ url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+ appName: "Web3-react Demo",
+ supportedChainIds: [1, 3, 4, 5, 42],
+});
+
+export const WalletConnect = new WalletConnectConnector({
+ rpcUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+ bridge: "https://bridge.walletconnect.org",
+ qrcode: true,
+});
+
+export const Injected = new InjectedConnector({
+ supportedChainIds: [1, 3, 4, 5, 42]
+});
 export const tipJar = "0x8DAA10845A8144469da192ef18b13bCdFBb73591";
 export const contractAddress = "0x836049Ddc0e177D2f52871b2d6e443dac0f2b659";
 // const abi = contract.abi;
 
 
 function HeroSection() {
+  const { activate, deactivate } = useWeb3React();
   // const [currentAccount, setCurrentAccount] = useState(null);
   // const [setCurrentAccount] = useState(null);
 
@@ -213,6 +233,46 @@ function HeroSection() {
             onClick={()=> window.open('https://twitch.tv/xojustkirst')}
           >
             <i className='fa fa-twitch' />
+          </Button>
+        </div>
+        <div>
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+            onClick={() => { activate(CoinbaseWallet) }}
+          >
+            Coinbase Wallet
+          </Button>
+        </div>
+        <div>  
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+            onClick={() => { activate(WalletConnect) }}
+          >
+            Wallet Connect
+          </Button>
+        </div>
+        <div>  
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+            onClick={() => { activate(Injected) }}
+          >
+            Metamask
+          </Button>
+        </div>
+        <div>
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+            onClick={deactivate}
+          >
+            Disconnect
           </Button> 
         </div>
 
