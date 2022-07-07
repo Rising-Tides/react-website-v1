@@ -40,7 +40,8 @@ video {
   /* margin-top: 16px; */
   margin-bottom: 60%;
 }
-.fa {
+.fa,
+.fab {
   color: rgb(135, 52, 134);
 }
 .hero-btns .btn {

@@ -92,13 +92,22 @@ function Footer() {
             </Link>
             <Link
                 class='social-icon-link instagram'
-                // to='/https://instagram.com/pandapennypicks'
                 target='_blank'
                 aria-label='Twitch'
                 // onClick={window.open('https://instagram.com/xojustkirst')}
               >
                 <a href='https://www.twitch.tv/xojustkirst'> 
                   <i class='fab fa-twitch' />
+                </a>
+            </Link> 
+            <Link
+                class='social-icon-link instagram'
+                target='_blank'
+                aria-label='Twitch'
+                // onClick={window.open('https://instagram.com/xojustkirst')}
+              >
+                <a href='https://www.tiktok.com/@xojustkirst?lang=en'> 
+                <i class="fab fa-tiktok"/>
                 </a>
             </Link> 
             {/* <Link
