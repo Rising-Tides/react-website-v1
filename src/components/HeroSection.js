@@ -38,7 +38,7 @@ export const contractAddress = "0x836049Ddc0e177D2f52871b2d6e443dac0f2b659";
 
 
 function HeroSection() {
-  const { activate, deactivate } = useWeb3React();
+  const { activate, deactivate} = useWeb3React();
   // const [currentAccount, setCurrentAccount] = useState(null);
   // const [setCurrentAccount] = useState(null);
 
@@ -190,6 +190,53 @@ function HeroSection() {
   //   if (cnt>=images.length) cnt=0; 
   //     $('.hero-container').css("background-image","url("+images[cnt++]+")");
   // }
+  function sendEth(fromAddress, toAddress, etherValue) {
+    var weiValue = etherValue * Math.pow(10, 18);
+      var weiValueHex = weiValue.toString(16);
+      
+    if (window.ethereum === undefined) {
+          console.log('[ethTip] sendEth called without window.ethereum object');
+          return;
+      }
+  
+      var params = [{
+          to: toAddress,
+          from: fromAddress,
+          value: weiValueHex
+      }];
+      
+    window.ethereum.request({
+          method: 'eth_sendTransaction',
+          params: params
+      }) 
+      .then((result) => {
+          console.log('[ethTip] User completed Tx: https://etherscan.io/tx/' + result);
+      alert('Thanks for the eth! https://etherscan.io/tx/' + result);
+    })
+      .catch((error) => {
+          console.log('[ethTip] ' + error['message']);
+      });
+  }
+  
+  function connectAndSendEth(toAddress, etherValue) {
+      if (window.ethereum === undefined) {
+          console.log('[ethTip] connectAndSendEth called without window.ethereum object');
+          return;
+      }
+  
+      window.ethereum.request(
+          { method: 'eth_requestAccounts' }
+      )
+      .then((accounts) => {
+          if (accounts.length > 0) {
+              sendEth(accounts[0], toAddress, etherValue);
+          }
+      })
+      .catch((error) => {
+          console.log('[ethTip] Error: ' + JSON.stringify(error));
+      });
+  }
+  
 
   useEffect(() => {
     // checkWalletIsConnected();
@@ -206,6 +253,8 @@ function HeroSection() {
   }, [])  
 
   return (
+
+
     <div className='hero-container'>
       {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
       {/* <img src='/images/IMG_1.jpg'>''</img> */}
@@ -273,6 +322,14 @@ function HeroSection() {
             onClick={deactivate}
           >
             Disconnect
+          </Button> 
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+            onClick={() => {connectAndSendEth(tipJar, 0.02)}}
+          >
+            Donate
           </Button> 
         </div>
 
