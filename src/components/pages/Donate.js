@@ -119,6 +119,7 @@ export default function Donate() {
       // <button onClick={mintNftHandler} className='cta-button mint-nft-button'>
       //   Mint NFT
       // </button>
+
       <div className='tip'>
         {/* <Button  
           className='btns'

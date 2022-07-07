@@ -53,11 +53,11 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/FAQ'
+                to='/TikTok'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                FAQ
+                TikTok
               </Link>
             </li>*/}
             <li className='nav-item'>
@@ -76,6 +76,15 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 Donate
+              </Link>
+            </li> 
+            <li className='nav-item'>
+            <Link
+                to='/Feed'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                TikTok
               </Link>
             </li> 
 {/* 

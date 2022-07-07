@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import FAQ from './components/pages/FAQ';
+import Feed from './components/pages/Feed';
 import Watch from './components/pages/Watch';
 import Donate from './components/pages/Donate';
 import Footer from './components/Footer';
@@ -40,7 +40,7 @@ function App() {
         <div>Network ID: {chainId}</div>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/FAQ' component={FAQ} />
+          <Route path='/Feed' component={Feed} />
           <Route path='/watch' component={Watch} />
           <Route path='/donate' component={Donate} />
         </Switch>

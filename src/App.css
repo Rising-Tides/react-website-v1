@@ -9,7 +9,7 @@
 }
 .twitch-embed,
 .home,
-.FAQ,
+.Feed,
 .watch,
 .donate {
   display: flex;
@@ -27,7 +27,7 @@
   color: rgb(213, 12, 217);
   font-size: 100px;  
 }
-.FAQ {
+.Feed {
   background-image: url('/images/IMG_2.jpg');
   background-position: center;
   background-size: cover;
