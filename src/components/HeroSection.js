@@ -73,7 +73,7 @@ function HeroSection() {
             onClick={()=> window.open('https://instagram.com/xojustkirst')}
           >
           
-              <i className='fa fa-instagram' />
+          <i className='fa fa-instagram' />
 
           </Button> 
         </div>

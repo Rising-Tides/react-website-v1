@@ -100,18 +100,7 @@ export default function Donate() {
           console.log('[ethTip] Error: ' + JSON.stringify(error));
       });
   } 
-  // const connectWalletButton = () => {
-  //   return (
-  //     <Button  
-  //       className='btns'
-  //       buttonStyle='btn--primary'
-  //       buttonSize='btn--large'
-  //       onClick={connectWalletHandler}
-  //       >
-  //       CONNECT WALLET
-  //     </Button>
-  //   )
-  // }
+
   const { activate, deactivate} = useWeb3React();
   const mintNftButton = () => {
 
