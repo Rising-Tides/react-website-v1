@@ -65,7 +65,7 @@
   list-style: none;
   text-align: center;
   width: 60vw;
-  justify-content: end;
+  justify-content: top;
   margin-right: 2rem;
 }
 
@@ -117,7 +117,7 @@
     transition: all 0.5s ease;
   }
   .nav-menu.active {
-    background: #27082a;
+    background: #dfcae0;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -133,7 +133,7 @@
 
   .nav-links:hover {
     background-color: #fff;
-    color: #242424;
+    color: #cf71d8;
     border-radius: 0;
   }
 
