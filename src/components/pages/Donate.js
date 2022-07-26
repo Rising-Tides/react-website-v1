@@ -109,7 +109,7 @@ export default function Donate() {
       //   Mint NFT
       // </button>
 
-      <div className='tip'>
+      <div className='hero-container'>
         {/* <Button  
           className='btns'
           buttonStyle='btn--outline'
@@ -119,55 +119,57 @@ export default function Donate() {
           >
           Send ETH
         </Button> */}
-        <div>
-          <Button
-            className='btns'
-            buttonStyle='btn--outline'
-            buttonSize='btn--large'
-            onClick={() => { activate(CoinbaseWallet) }}
-          >
-            Coinbase Wallet
-          </Button>
-        </div>
-        <div>  
-          <Button
-            className='btns'
-            buttonStyle='btn--outline'
-            buttonSize='btn--large'
-            onClick={() => { activate(WalletConnect) }}
-          >
-            Wallet Connect
-          </Button>
-        </div>
-        <div>  
-          <Button
-            className='btns'
-            buttonStyle='btn--outline'
-            buttonSize='btn--large'
-            onClick={() => { activate(Injected) }}
-          >
-            Metamask
-          </Button>
-        </div>
-        <div>
-          <Button
-            className='btns'
-            buttonStyle='btn--outline'
-            buttonSize='btn--large'
-            onClick={deactivate}
-          >
-            Disconnect
-          </Button>  
-        <div>   
-          <Button
-            className='btns'
-            buttonStyle='btn--outline'
-            buttonSize='btn--large'
-            onClick={() => {connectAndSendEth(tipJar, 0.02)}}
-          >
-            Donate
-            </Button> 
-          </div> 
+        <div className='hero-btns'>
+          <div>
+            <Button
+              className='btns'
+              buttonStyle='btn--outline'
+              buttonSize='btn--large'
+              onClick={() => { activate(CoinbaseWallet) }}
+            >
+              Coinbase Wallet
+            </Button>
+          </div>
+          <div>  
+            <Button
+              className='btns'
+              buttonStyle='btn--outline'
+              buttonSize='btn--large'
+              onClick={() => { activate(WalletConnect) }}
+            >
+              Wallet Connect
+            </Button>
+          </div>
+          <div>  
+            <Button
+              className='btns'
+              buttonStyle='btn--outline'
+              buttonSize='btn--large'
+              onClick={() => { activate(Injected) }}
+            >
+              Metamask
+            </Button>
+          </div>
+          <div>
+            <Button
+              className='btns'
+              buttonStyle='btn--outline'
+              buttonSize='btn--large'
+              onClick={deactivate}
+            >
+              Disconnect
+            </Button>  
+          <div>   
+            <Button
+              className='btns'
+              buttonStyle='btn--outline'
+              buttonSize='btn--large'
+              onClick={() => {connectAndSendEth(tipJar, 0.02)}}
+            >
+              Donate
+              </Button> 
+            </div> 
+          </div>
         </div>
       </div>
 
