@@ -29,16 +29,18 @@ video {
 }
 
 .hero-container > p {
-  margin-top: 8px;
+  margin-top: 16px;
   color: #fff;
   font-size: 32px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+  font-family: 'Lucida Grande','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
-
+.big {
+  font-size: 10px
+}
 .hero-btns {
-  margin-top: 10px;
-  margin-bottom: 120%;
+  margin-top: 40px;
+  margin-bottom: 10%;
 }
 .fa,
 .fab {

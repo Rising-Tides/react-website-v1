@@ -33,8 +33,14 @@
   padding: 24px 100px;
   font-size: 40px;
   width: 400px;
+  color: #ff00c8;
 }
-
+.btn--large--pink {
+  padding: 24px 100px;
+  font-size: 40px;
+  width: 400px;
+  color: #c21b9e;
+}
 .btn--large:hover,
 .btn--medium:hover {
   transition: all 0.3s ease-out;

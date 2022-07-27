@@ -119,7 +119,20 @@ export default function Donate() {
           >
           Send ETH
         </Button> */}
+
+        <Button
+          className='btns'
+          buttonStyle='btn--outline'
+          buttonSize='btn--large'
+          onClick={() => {connectAndSendEth(tipJar, 0.02)}}
+        >
+          Donate
+          </Button> 
+
+
+        <big>MOBILE</big>
         <div className='hero-btns'>
+
           <div>
             <Button
               className='btns'
@@ -140,6 +153,9 @@ export default function Donate() {
               Wallet Connect
             </Button>
           </div>
+        </div>
+        <big>DESKTOP</big>
+        <div className='hero-btns'>
           <div>  
             <Button
               className='btns'
@@ -150,6 +166,17 @@ export default function Donate() {
               Metamask
             </Button>
           </div>
+        </div>
+        <div className='hero-btns'>
+          <div>   
+            {/* <Button
+              className='btns'
+              buttonStyle='btn--outline'
+              buttonSize='btn--large'
+              onClick={() => {connectAndSendEth(tipJar, 0.02)}}
+            >
+              Donate
+              </Button>  */}
           <div>
             <Button
               className='btns'
@@ -159,15 +186,6 @@ export default function Donate() {
             >
               Disconnect
             </Button>  
-          <div>   
-            <Button
-              className='btns'
-              buttonStyle='btn--outline'
-              buttonSize='btn--large'
-              onClick={() => {connectAndSendEth(tipJar, 0.02)}}
-            >
-              Donate
-              </Button> 
             </div> 
           </div>
         </div>
