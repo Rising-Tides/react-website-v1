@@ -7,7 +7,7 @@ import Feed from './components/pages/Feed';
 import Watch from './components/pages/Watch';
 import Donate from './components/pages/Donate';
 import Footer from './components/Footer';
-import { useWeb3React } from '@web3-react/core'
+// import { useWeb3React } from '@web3-react/core'
 // import { WalletLinkConnector } from "@web3-react/walletlink-connector";
 // import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 // import { InjectedConnector } from "@web3-react/injected-connector";
@@ -30,14 +30,14 @@ import { useWeb3React } from '@web3-react/core'
 // });
 
 function App() {
-  const { active, chainId, account } = useWeb3React();
+  // const { active, chainId, account } = useWeb3React();
   return (
     <>
       <Router>
         <Navbar/>
-        <div>Connection Status: {active}</div>
+        {/* <div>Connection Status: {active}</div>
         <div>Account: {account}</div>
-        <div>Network ID: {chainId}</div>
+        <div>Network ID: {chainId}</div> */}
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/Feed' component={Feed} />
